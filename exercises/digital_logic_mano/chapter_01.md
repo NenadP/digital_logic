@@ -211,3 +211,182 @@ $$
  (0\ 110\ 010\ 011\ 001\ 101)_{2} = \\ 
  (62315)_{8}
  $$
+
+ ## 1.8
+ Convert the decimal number 431 to binary in two ways: (a) convert directly to binary;
+(b) convert first to hexadecimal and then from hexadecimal to binary. Which method is faster?
+
+(a)
+$$
+431 \div 2 = 215 r 1 \\
+215 \div 2 = 107 r 1 \\
+107 \div 2 = 53  r 1 \\
+53  \div 2 = 26  r 1 \\
+26  \div 2 = 13  r 0 \\
+13  \div 2 = 6   r 1 \\
+6   \div 2 = 3   r 0 \\
+3   \div 2 = 1   r 1 \\
+1   \div 2 = 0   r 1 \\
+\\[1em]
+Result = (1\ 1100\ 0011)_{2} \\
+$$
+
+(b)
+$$
+431 \div 16 = 26 r 15 = F \\
+26  \div 16 = 1  r 10 = A \\
+1   \div 16 = 0  r 1  = 1 \\
+
+Hex = (1AF)_{16} \\
+\\[2em]
+\text {Hex to binary:} \\
+\\[1em]
+Fh = 1111b \\
+Ah = 1010b \\
+1h = 0001b \\
+\\[1em]
+Result = (0001\ 1100\ 0011)_{2} = \\
+(1\ 1100\ 0011)_{2}
+$$
+
+(a) is more straightforward, (b) has possibly less steps
+
+## 1.9
+Express the following numbers in decimal:
+
+$$
+(a)*\ (10110.0101)_{2} \\
+(b)*\ (16.5)_{16} \\
+(c)*\ (26.24)_{8} \\
+(d)\ (DADA.B)_{16} \\
+(e)\ (1010.1101)_{2} \\
+$$
+
+(a)
+
+$$
+1 \times 2^{-4} = 0.0625 \\
+0 \times 2^{-3} = 0 \\
+1 \times 2^{-2} = 0.25 \\
+0 \times 2^{-1} = 0 \\
+0 \times 2^0 = 0 \\
+1 \times 2^1 = 2 \\ 
+1 \times 2^2 = 4 \\
+0 \times 2^3 = 0 \\
+1 \times 2^4 = 16 \\
+\\[1em]
+note: 1 \times 2^{-4} = {1 \over 2^{4}} = {1 \over 16} = 0.0625   \\
+\\[1em]
+Result = 16 + 4 + 2 + 0.25 + 0.0625 = \\
+(22.3125)_{10}
+$$
+
+(b)
+$$
+5 \times 16^{-1} = 0.5 \\
+6 \times 16^0 = 6 \\
+1 \times 16^1 = 16 \\ 
+\\[1em]
+note: 5 \times 16^{-1} = {5 \over 16^{1}} = {5 \over 16} = 0.3125 \\
+\\[1em]
+Result = 24 + 0.3125 = \\
+(24.3125)_{10}
+$$
+
+(c)*
+$$
+(26.24)_{8} 
+4 \times 8^{-2} = 0.0625 \\
+2 \times 8^{-1} = 0.250 \\
+6 \times 8^0 = 6 \\
+2 \times 8^1 = 16 \\
+Result = 24 + 0.3125 = \\
+(24.3125)_{10}
+$$
+
+(d)
+$$
+B \times 16^{-1} = 0.6875 \\
+A \times 16^0 = 10 \\
+D \times 16^1 = 208 \\ 
+A \times 16^2 = 2560 \\ 
+D \times 16^3 = 53248 \\ 
+Result = 10 + 208 + 2560 + 53248 + 0.6875 = \\
+(56026.6875)_{10}
+$$
+
+(e)
+$$
+1 \times 2^{-4} = 0.0625 \\
+0 \times 2^{-3} = 0 \\
+1 \times 2^{-2} = 0.25 \\
+1 \times 2^{-1} = 0.5 \\
+0 \times 2^0 = 0 \\
+1 \times 2^1 = 2 \\ 
+0 \times 2^2 = 0 \\
+1 \times 2^3 = 8 \\
+Result = 8 + 2 + 0.5 + 0.25 + 0.0625 = \\
+(10.8125)_{10}
+$$
+
+## 1.10
+Convert the following binary numbers to hexadecimal and to decimal: (a) 1.10010,
+(b) 110.010. Explain why the decimal answer in (b) is 4 times that in (a).
+
+(a)
+$$
+0 \times 2^{-5} = 0 \\
+1 \times 2^{-4} = 0.0625 \\
+0 \times 2^{-3} = 0 \\
+0 \times 2^{-2} = 0 \\
+1 \times 2^{-1} = 0.5 \\
+1 \times 2^0 = 1 \\
+Result = 1 + 0.5 + 0.0625 = \\
+(1.5625)_{10} \\
+\\[1em]
+to Hex:
+\\[0.5em]
+0.5625 \times 16 = 9 \\
+\text {fraction part} =  0.9 \\
+Result = (1.9)_{16}
+$$
+
+(b)
+$$
+0 \times 2^{-3} = 0 \\
+1 \times 2^{-2} = 0.25 \\
+0 \times 2^{-1} = 0 \\
+0 \times 2^0 = 0 \\
+1 \times 2^1 = 2 \\
+1 \times 2^2 = 4 \\
+Result = 6.25 = \\
+(6.25)_{10} \\
+\\[1em]
+to Hex:
+\\[0.5em]
+0.25 \times 16 = 4 \\
+\text {fraction part} =  0.4 \\
+Result = 6 + 0.4 = (6.4)_{16} \\
+$$
+
+
+Since we shifted bits to the left 2 places, its
+equal to multiplying number by 
+
+$$
+2^2 = 4 \\
+$$
+Showing intermediary step of multiplication as well:  
+original, x2, x4
+$$
+1.10010 \\
+11.0010 \\
+110.010 \\
+$$
+
+## 1.11
+Perform the following division in binary: 111011 ÷ 101.
+
+$$
+TODO
+$$
