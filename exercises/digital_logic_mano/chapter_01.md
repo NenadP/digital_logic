@@ -387,6 +387,131 @@ $$
 ## 1.11
 Perform the following division in binary: 111011 ÷ 101.
 
+
+```
+      001011
+    --------
+101 | 111011
+    - 0 
+      --
+      11
+     - 0
+     ----
+      111
+    - 101
+      ----
+      0100
+    -    0
+      ----
+       1001
+    -   101
+       ----
+        1001
+    -    101
+        ----
+         100
+```
 $$
-TODO
+Result = (1011)_{2}\ \text {Remainder: } (100)_{2}
+$$
+
+## 1.12*
+Add and multiply the following numbers without converting them to decimal.
+
+**(a) Binary numbers 1011 and 101.**
+
+Binary addition:
+
+Rules
+$$
+0 + 0 = 0 \\
+0 + 1 = 1 \\
+1 + 0 = 1 \\
+1 + 1 = 0\ carry\ 1 \\
+$$
+
+```
+carry   11
+       ----
+       1011
+    +   101
+       ----
+      10000
+```
+Result = 10000
+
+Multiplication:
+
+Rules
+$$
+0 \times 0 = 0 \\
+0 \times 1 = 0 \\
+1 \times 0 = 0 \\
+1 \times 1 = 1 \\
+$$
+
+
+Multiply each bit with the number and shift to the left, and then perform binary addition
+```
+       1011
+ x      101
+       ----
+       1011
+      0000
+ +   1011
+     ------
+     110111
+```
+Result = 110111
+
+**(b) Hexadecimal numbers 2E and 34.**
+
+Addition:
+
+```
+Carry     1
+       -----
+          2E
+       +  34
+       -----
+          62h
+```
+(Eh + 4h = 12h, carry 1)
+
+Multiplication: 
+
+```
+   2E
+x  34
+  ---
+   38
++  80
+  ---
+   B8
+  2A
++ 60
+  ---
+  958h
+```
+
+In other words:
+$$
+\text {Multiply by 4}: \\
+\\[0.5em]
+(4)_{16} \times (E)_{16} = (38)_{16} \\ 
+(4)_{16} \times (2)_{16} = (80)_{16} \\
+\\[0.5em]
+\text {Add together the products}: \\
+\\[0.5em]
+(38)_{16} + (80)_{16} = (B8)_{16} \\
+\\[0.5em]
+\text {Multiply By 3}: \\
+\\[0.5em]
+(3)_{16} \times (E)_{16} = (2A)_{16} \\
+(3)_{16} \times (2)_{16} = (60)_{16} \\
+\\[0.5em]
+\text {At this point we can add all products together} \\
+\text {(latest products gets zero as we shifted to the left)} \\
+\\[0.5em]
+(B8)_{16} + (2A0)_{16} + (600)_{16} = (958)_{16} \\
 $$
